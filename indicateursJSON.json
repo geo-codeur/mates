@@ -1,0 +1,506 @@
+[
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Taux de Pauvreté 2021",
+    "Sens de variation": "Négatif",
+    "Sigles": "Tp",
+    "Formule": "Le taux de pauvreté est calculé en déterminant la proportion d'individus dont le niveau de vie est inférieur à un seuil défini, généralement fixé à 60 % du revenu médian disponible de la population."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Revenu disponible",
+    "Sens de variation": "Positif",
+    "Sigles": "Rd",
+    "Formule": "Revenu Disponible=Revenu Personnel−Impots+Transferts"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Taux de privation matérielle et sociale 2024",
+    "Sens de variation": "Négatif",
+    "Sigles": "Tpms",
+    "Formule": "Le taux de privation matérielle et sociale est calculé par l'Insee à partir d'une enquête sur les ressources et les conditions de vie (SRCV).  L'indicateur mesure la part de la population qui se trouve dans l'incapacité de couvrir les dépenses liées à au moins cinq éléments de lavie courante sur treize considérés comme souhaitables, voire nécessaires, pour avoir un niveau de vie acceptable"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Médiane du niveau de vie 2021",
+    "Sens de variation": "Positif",
+    "Sigles": "Mnv",
+    "Formule": "Niveau de vie: revenu disponible du ménage divisé par le nombre d'unités de consommation."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Part des pensions, retraites et rentes dans le rev. Disp 2021",
+    "Sens de variation": "Positif",
+    "Sigles": "Pp3rd",
+    "Formule": "Le revenu disponible brut se compose :des revenus d'activité+ pensions, retraites et rentes+ revenus du patrimoine et autres+ prestations sociales- impôts"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Part des indemnités de chômage dans le rev. Disp 2021",
+    "Sens de variation": "Positif",
+    "Sigles": "Picrd",
+    "Formule": "Le revenu disponible brut se compose :des revenus d'activité+ pensions"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Pauvreté",
+    "Indicateur": "Part des impôts dans le rev. disp 2021",
+    "Sens de variation": "Négatif",
+    "Sigles": "Pirv",
+    "Formule": "Le revenu net imposable est obtenu après déduction des abattements et charges autorisées. Les tranches de revenus sont ensuite appliquées"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Nb d'emplois au lieu de travail (LT) 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "NbeLT",
+    "Formule": "Le nombre d'emploi au lieu de travail est calculé en tenant compte des personnes ayant déclaré avoir un emploi dans le formulaire du recensement."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Part des emplois sal. dans le nb d’emplois au LT 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PesNbLT",
+    "Formule": "Rapport entre le nombre d'emplois salariés au lieu de travail et le nombre d'emplois au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Part des emplois non sal. dans le nb d’emplois au LT 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "PensNbeLT",
+    "Formule": "Rapport entre le nombre d'emplois non-salariés au lieu de travail et le nombre d'emplois au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Salaire net EQTP mensuel moyen 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "SnEQTP2m",
+    "Formule": "Salaire net mensuel en équivalent temps plein, les données sont localisées au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Salaire net EQTP mensuel moyen cadres sup",
+    "Sens de variation": "Positif",
+    "Sigles": "SnEQTP2mCS",
+    "Formule": "Le champ correspond aux salariés du privé, y compris bénéficiaires de contrats aidés et de contrats de professionnalisation ; hors apprentis, stagiaires, salariés agricoles et salariés des particuliers employeurs."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Part des effectifs admin. pub., enseign., santé et act. Soc 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "PeAdmin",
+    "Formule": "Rapport des effectifs de l'administration publique, enseignement, santé et action sociale sur le nombre total des effectifs."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Part des effectifs de l'industrie 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "PeIndis",
+    "Formule": "Rapport des effectifs de l'industrie sur le nombre total des effectifs."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Concentration d'emploi 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "CE",
+    "Formule": "L'indice de concentration de l'emploi mesure le rapport entre le nombre d’emplois total proposés sur un territoire et le nombre d'actifs occupés (actifs en emploi) qui y résident."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emploi",
+    "Indicateur": "Effectifs salariés 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "ES",
+    "Formule": "Les effectifs salariés correspondent ici aux postes présents durant la dernière semaine de décembre."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emp. Catégorie SP",
+    "Indicateur": "Part des cadres et prof. intellectuelles sup. dans le nb d’emplois au LT 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PcpisNbLT",
+    "Formule": "Rapport entre le nombre de cadres et professions intellectuelles supérieures au lieu de travail et le nombre d'emplois au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emp. Catégorie SP",
+    "Indicateur": "Part des employés dans le nb d’emplois au LT 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PeNbeLT",
+    "Formule": "Rapport entre le nombre  d'employés au lieu de travail et le nombre d'emplois au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Emp. Catégorie SP",
+    "Indicateur": "Part des ouvriers dans le nb d’emplois au LT 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PoNbeLT",
+    "Formule": "Rapport entre le nombre d'ouvriers au lieu de travail et le nombre d'emplois au lieu de travail."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Commerce et services",
+    "Indicateur": "Banque, caisse d'épargne 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "BCE",
+    "Formule": "Établissements de crédit agréés, les banques mutualistes ou coopératives et caisses d’épargne et de prévoyance. Cette catégorie ne comprend pas les guichets financiers de La Poste."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Commerce et services",
+    "Indicateur": "Supérette - Épicerie 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "SE",
+    "Formule": "Commerces de détail non spécialisés à prédominance alimentaire avec une surface de vente déclarée entre 120 et 400 m² et commerces de détail non"
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Commerce et services",
+    "Indicateur": "Boulangerie-pâtisserie 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "BP",
+    "Formule": "Commerces dédiés à la vente de produits de boulangerie (pain, viennoiserie, confiseries, quiches, tartes salées, etc.), artisanale ou pas, avec ou sans pâtisserie, et sans possibilité de consommer sur place."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Commerce et services",
+    "Indicateur": "Unités légales dans commerce de gros & détail, transports, hébergemnt & restauration 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "Ulctrh",
+    "Formule": "unités légales marchandes et productives non agricoles. Le nombre d'unités légales correspond au nombre d'unités légales économiquement actives dans l'année."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Commerce et services",
+    "Indicateur": "Part des effectifs des commerces,transport et services divers 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "PEC",
+    "Formule": "Rapport des effectifs du commerce, transport et services marchands sur le nombre total des effectifs."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Établissements et Entreprises",
+    "Indicateur": "Nombre d'établissements 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "NbEtab",
+    "Formule": "établissements employeurs durant l'année et actifs la dernière semaine de décembre hors secteur de la défense et hors particuliers employeurs."
+  },
+  {
+    "Thématique": "ECONOMIE",
+    "Sous-thématique": "Établissements et entreprises",
+    "Indicateur": "Part activités immobilières dans les créations d'entreprise 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "PAICE",
+    "Formule": "Rapport du nombre d'entreprises créées dans les activités immobilières sur le nombre total d'entreprises créées."
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Agriculture",
+    "Indicateur": "Part des effectifs de l'agriculture, sylviculture et pêche 2023",
+    "Sens de variation": "Positif",
+    "Sigles": "PeASP",
+    "Formule": "Rapport des effectifs de l'agriculture, sylviculture, pêche sur le nombre total des effectifs."
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Déchet",
+    "Indicateur": "Quantité de déchets produit par habitant 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "QDPH",
+    "Formule": "Quantité de déchet produit kg/an/ha"
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Déchet",
+    "Indicateur": "Taux de recyclage des déchets municipaux 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "TRDM",
+    "Formule": "Taux de recyclage (%)=(Dechets municipaux recycles/Dechets municipaux produits)​×100"
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Eau",
+    "Indicateur": "Taux de rendement des réseaux d'eau potable 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "T2rEP",
+    "Formule": "Cet indicateur réflète l'éfficacité du réseaux de distribution d'eau potable dans la ville."
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Énergie",
+    "Indicateur": "Proportion de la population en incapacité de maintenir une température adéquate dans le logement 2023",
+    "Sens de variation": "Négatif",
+    "Sigles": "Ppit",
+    "Formule": "Proportion de personnes ne pouvant pas maintenir le logement à bonne température"
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Énergie",
+    "Indicateur": "Part des énergies renouvelables dans la consommation finale brute d’énergie  2023",
+    "Sens de variation": "Positif",
+    "Sigles": "Perc",
+    "Formule": "La part des énergies renouvelables dans la consommation finale brute présente la part globale des  énergies renouvelables dans la consommation finale brute d’énergie."
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Espace vert",
+    "Indicateur": "Part de la population à moins de cinq minutes de marche d’un espace vert 2019",
+    "Sens de variation": "Positif",
+    "Sigles": "Pp5minEV",
+    "Formule": "accès à un espace vert à moins de cinq minutes de marche."
+  },
+  {
+    "Thématique": "ENVIRONNEMENT",
+    "Sous-thématique": "Espace vert",
+    "Indicateur": "Part de la superficie couverte par un espace vert 2019",
+    "Sens de variation": "Positif",
+    "Sigles": "PSCEV",
+    "Formule": "Part de la superficie couverte par un espace vert"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Implication citoyenne",
+    "Indicateur": "Taux de participation électorale 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "TPE",
+    "Formule": "Taux de participation (%)=Nombre de votants/(Nombre d’inscrits​)×100"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Implication citoyenne",
+    "Indicateur": "Électeurs inscrits sur liste principale 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "EILP",
+    "Formule": "Nombre d'électeur inscrit sur la liste principale"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "Nb de pers. non scolarisées de 15 ans ou + 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "NbPNS15+",
+    "Formule": "Nombre de personnes non scolarisées de 15 ans ou plus"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "Part des non ou peu diplômés dans la pop. non scolarisée de 15 ans ou + 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "PnpDPNs",
+    "Formule": "Rapport entre le nombre de personnes non scolarisées de 15 ans ou plus titulaires d'aucun diplôme ou au plus d'un CEP et le nombre total de personnes non scolarisées de 15 ans ou plus."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "École maternelle, primaire, élémentaire 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "NbEcol",
+    "Formule": "Nombre d'écoles"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "Collège (en nombre) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "NbC",
+    "Formule": "Nombre de collèges"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "Lycée (en nombre) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "NbL",
+    "Formule": "Nombre de lycées"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Education",
+    "Indicateur": "Part des non diplômés chez les 20-24 ans sortis des études 2019",
+    "Sens de variation": "Négatif",
+    "Sigles": "PNDse",
+    "Formule": "Rapport entre le nombre de jeunes de 20 à 24 ans non diplômés et non en formation et le nombre total de jeunes de 20 à 24 ans sortis d’études"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Protection Sociale",
+    "Indicateur": "Part des personnes de 75 ans ou plus bénéficiant de l'Aide Personnalisée d'Autonomie 2020",
+    "Sens de variation": "Positif",
+    "Sigles": "PpBAPA",
+    "Formule": "Rapport entre le nombre de bénéficiaire de l'APA (à domicile et en établissement) et la population des 75 ans et plus."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Protection Sociale",
+    "Indicateur": "Établissement d’accueil du jeune enfant (EAJE) (en nombre) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "EAJE",
+    "Formule": "Nombre d'établissement d’accueil du jeune enfant (EAJE)"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Salles multisports (gymnases) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "SM",
+    "Formule": "Salles multisports ou gymnases"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Médecin généraliste 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "MG",
+    "Formule": "Nombre de médecin généraliste"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Chirurgien dentiste 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "CD",
+    "Formule": "Nombre de chirurgiens dentiste"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Masseur kinésithérapeute 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "MKine",
+    "Formule": "Lieu d’exercice des masseurs et kinésithérapeutes exerçant leur activité principale en libéral (en cabinet individuel ou de groupe ou en société)."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Infirmier (en nombre) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "Inf",
+    "Formule": "Lieu d’exercice des infirmiers exerçant leur activité principale en libéral (en cabinet individuel ou de groupe ou en société). Les infirmiers psychiatriques sont absents la BPE."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Pharmacie (en nombre) 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "Pha",
+    "Formule": "Commerces de détail de médicaments, produits paramédicaux, appareillages, produits d’hygiène et de produits vétérinaires. Ce type d’équipement inclut aussi les propharmaciens."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Espérance de vie des hommes à la naissance 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "EspVHn",
+    "Formule": "Cette espérance est celle à la naissance, il s'agit de la moyenne de vie de tous les individus d'une classe d'âge"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Santé",
+    "Indicateur": "Espérance de vie des femmes à la naissance 2024",
+    "Sens de variation": "Positif",
+    "Sigles": "EspVFn",
+    "Formule": "Cette espérance est celle à la naissance, il s'agit de la moyenne de vie de tous les individus d'une classe d'âge"
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Egalité",
+    "Indicateur": "Taux d'emploi des femmes de 25-54 ans 2021",
+    "Sens de variation": "Positif",
+    "Sigles": "TeF",
+    "Formule": "Rapport entre le nombre d’actifs occupés femme de 25 à 54 ans et le nombre de femmes de 25 à 54 ans."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Egalité",
+    "Indicateur": "Taux d'emploi des hommes de 25-54 ans 2021",
+    "Sens de variation": "Positif",
+    "Sigles": "TeH",
+    "Formule": "Rapport entre le nombre d’actifs occupés homme de 25 à 54 ans et le nombre d'homme de 25 à 54 ans."
+  },
+  {
+    "Thématique": "SOCIAL",
+    "Sous-thématique": "Egalité",
+    "Indicateur": "Part de la population éloignée des équipements de proximité 2021",
+    "Sens de variation": "Négatif",
+    "Sigles": "PpeEp",
+    "Formule": "Rapport entre la population éloignée d’un équipement de gamme de proximité et la population totale."
+  },
+  {
+    "Thématique": "CADRE DE VIE",
+    "Sous-thématique": "Habitat",
+    "Indicateur": "Part des appartements dans le total des logements 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PATotL",
+    "Formule": "Rapport du nombre d' appartements sur le nombre total de logements"
+  },
+  {
+    "Thématique": "CADRE DE VIE",
+    "Sous-thématique": "Habitat",
+    "Indicateur": "Part des résidences principales en suroccupation 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "PRppS",
+    "Formule": "100 * nb résid. ppales suroccupées / ensemble des résid. ppales hors studios de 1 personne"
+  },
+  {
+    "Thématique": "CADRE DE VIE",
+    "Sous-thématique": "Habitat",
+    "Indicateur": "Part des rés. principales construites avant 1946 2022",
+    "Sens de variation": "Négatif",
+    "Sigles": "PRppC1946",
+    "Formule": "Rapport du nombre de résidences principales construites avant 1946 sur le nombre total de résidences principales"
+  },
+  {
+    "Thématique": "CADRE DE VIE",
+    "Sous-thématique": "Habitat",
+    "Indicateur": "Part des rés. secondaires (y compris les logements occasionnels) dans le total des logements 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PRS",
+    "Formule": "Rapport du nombre de résidences secondaires ou occasionnelles sur le nombre total de logements"
+  },
+  {
+    "Thématique": "MOBILITE ET DEPLACEMENT",
+    "Sous-thématique": "Transports collectifs",
+    "Indicateur": "Part des actifs occupés de 15 ans ou plus les transports en commun 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PAocTC",
+    "Formule": "(pnn_actocc15p_commun/ pnn_actocc15p)*100"
+  },
+  {
+    "Thématique": "MOBILITE ET DEPLACEMENT",
+    "Sous-thématique": "Accès à la mobilité",
+    "Indicateur": "Part des actifs occ 15 ans ou plus vélo pour travailler 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PAocVT",
+    "Formule": "( pnn_actocc15p_velo/ pnn_actocc15p)*100"
+  },
+  {
+    "Thématique": "MOBILITE ET DEPLACEMENT",
+    "Sous-thématique": "Accès à la mobilité",
+    "Indicateur": "Part des actifs occ 15 ans ou plus voiture pour travailler 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PAocVeT",
+    "Formule": "(pnn_actocc15p_voiture/ pnn_actocc15p)*100"
+  },
+  {
+    "Thématique": "MOBILITE ET DEPLACEMENT",
+    "Sous-thématique": "Accès à la mobilité",
+    "Indicateur": "Part des ménages ayant au moins 1 voiture 2022",
+    "Sens de variation": "Positif",
+    "Sigles": "PMayV",
+    "Formule": "100 * Nombre de ménages disposant au moins d'une voiture / Nombre de ménages"
+  }
+]

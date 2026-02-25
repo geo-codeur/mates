@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Carte 3D Mapbox - Style personnalisé</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Mapbox GL JS -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #map {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .mapboxgl-popup {
+        max-width: 250px;
+        font: 13px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+
+      .mapboxgl-ctrl-logo,
+      .mapboxgl-ctrl-attrib {
+        display: none !important; /* facultatif pour un look plus propre */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      // === Configuration Mapbox ===
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoic2V5ZGljYW0iLCJhIjoiY21oM3VmczNyMWp1czJtcjR1enFhYzg4byJ9.eBCpaqXGBDEbXXTXvL0dgQ";
+
+      // === Initialisation de la carte ===
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/seydicam/cmh3v3rzb003801qycynj4kd4",
+        center: [2.79685, 49.401129], // Dakar
+        zoom: 14,
+        pitch: 60, // Inclinaison de la caméra pour l’effet 3D
+        bearing: -17, // Rotation de la vue
+        antialias: true, // améliore le rendu des bâtiments 3D
+      });
+      // Autoriser la rotation et l'inclinaison manuelles
+      map.dragRotate.enable();
+      map.touchZoomRotate.enableRotation();
+      // === Ajout du contrôle de navigation ===
+      map.addControl(new mapboxgl.NavigationControl());
+
+      // === Ajout d'un marqueur personnalisé ===
+      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        "Bienvenue à Dakar — Carte 3D personnalisée Mapbox !"
+      );
+
+      new mapboxgl.Marker({ color: "#FF5733" })
+        .setLngLat([2.79685, 49.401129])
+        .setPopup(popup)
+        .addTo(map);
+
+      // === Ajout du terrain 3D et des bâtiments extrudés ===
+      map.on("style.load", () => {
+        // Terrain 3D (si ton style supporte le terrain)
+        map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+
+        // Ajout de la source du terrain
+        map.addSource("mapbox-dem", {
+          type: "raster-dem",
+          url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+          tileSize: 512,
+          maxzoom: 14,
+        });
+
+        // Bâtiments 3D
+        const layers = map.getStyle().layers;
+        const labelLayerId = layers.find(
+          (layer) => layer.type === "symbol" && layer.layout["text-field"]
+        )?.id;
+
+        map.addLayer(
+          {
+            id: "3d-buildings",
+            source: "composite",
+            "source-layer": "building",
+            filter: ["==", "extrude", "true"],
+            type: "fill-extrusion",
+            minzoom: 15,
+            paint: {
+              "fill-extrusion-color": "#aaa",
+              "fill-extrusion-height": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                0,
+                15.05,
+                ["get", "height"],
+              ],
+              "fill-extrusion-base": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                0,
+                15.05,
+                ["get", "min_height"],
+              ],
+              "fill-extrusion-opacity": 0.6,
+            },
+          },
+          labelLayerId
+        );
+      });
+    </script>
+  </body>
+</html>

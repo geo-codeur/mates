@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outil SIG MATES</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <!-- Mapbox GL JS CSS -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- Mapbox Geocoder CSS -->
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <ul class="nav-container">
+        <div class="nav-left-group">
+          <!-- <li class="sig">Web SIG</li> -->
+          <li class="indicator-nav-item">
+            <button id="indicator-btn-nav" class="nav-btn-modern">
+              <i class="fa-solid fa-chart-line"></i> Indicateurs
+            </button>
+            <div id="indicator-details-panel" class="indicator-panel-top" style="display: none;">
+              <div class="panel-header">
+                <h3>Référentiel</h3>
+                <button id="close-indicator-panel">&times;</button>
+              </div>
+              <select id="indicator-dropdown">
+                <option value="">Sélectionnez un indicateur...</option>
+              </select>
+              <div id="indicator-info" class="panel-body">
+                <p class="placeholder-text">Choisissez un indicateur pour voir les détails.</p>
+              </div>
+            </div>
+          </li>
+          <li class="survey-nav-item">
+            <button id="survey-btn-nav" class="nav-btn-modern">
+              <i class="fa-solid fa-poll"></i> Enquêtes
+            </button>
+            <div id="survey-panel" class="indicator-panel-top" style="display: none; width: 450px;">
+              <div class="panel-header">
+                <h3>Résultats des Enquêtes (Compiègne)</h3>
+                <button id="close-survey-panel">&times;</button>
+              </div>
+        
+              <select id="survey-dropdown" style="width: 100%; padding: 8px; margin-bottom: 15px;">
+                <option value="">Sélectionnez un graphique...</option>
+                <option value="agePersonn.png">Age des personnes interrogées</option>
+                <option value="AncHabTerr.png">Ancienneté des habitants</option>
+                <option value="CatSocProf.png">Catégorie Socio-professionnelle</option>
+                <option value="critImportant.png">Critères les plus importants sur le territoire</option>
+                <option value="descriptionVille.png">Description de la ville</option>
+                <option value="genrePersonn.png">Genre des personnes interrogées</option>
+                <option value="percepBienEtre.png">Perception du bien-être</option>
+                <option value="perceptionQuartier.png">Perception du quartier</option>
+                <option value="possQuitVille.png">Possibilité de quitter la ville</option>
+                <option value="ReparQuitVille.png">Repartition des personnes souhaitant quitter la ville</option>
+                <option value="repartImportCatAge.png">Repartition de l'importance accordée à différents critères de vie par catégories d'âge</option>
+                <option value="repartImportCatGenre.png">Repartition de l'importance accordée à différents critères de vie par catégories de genre</option>
+                <option value="ressentiTerr.png">Comment les gens se sentent sur le territoire</option>
+                
+              </select>
+        
+              <div id="survey-display" style="text-align: center;">
+                <p class="placeholder-text">Le graphique s'affichera ici.</p>
+                <img id="survey-img" src="" alt="Graphique" style="display: none; max-width: 100%; border-radius: 4px; border: 1px solid #ddd;">
+            
+              <div id="survey-text-container" style="margin-top: 15px; text-align: left; display: none;">
+                <h4 id="survey-title" style="color: #28a745; margin-bottom: 5px;"></h4>
+                <p id="survey-description" style="font-size: 13px; color: #555; line-height: 1.4; background: #f9f9f9; padding: 10px; border-radius: 4px;"></p>
+              </div>
+              </div>
+            </div>
+          </li>
+        </div>
+        
+
+        <!-- Barre de recherche centrée -->
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Rechercher une commune..."
+            autocomplete="off"
+          />
+          <button id="search-button" title="Rechercher">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <div id="search-results"></div>
+        </div>
+
+        <!-- Menu à droite -->
+        <ul class="menu">
+          <!-- Bouton 3D intégré dans la navbar -->
+          <li class="toggle-3d-item">
+            <div class="toggle-3d-control">
+              <label class="switch">
+                <input type="checkbox" id="toggle-3d-checkbox" />
+                <span class="slider">
+                  <span class="slider-text" data-off="2D" data-on="3D"></span>
+                </span>
+              </label>
+              <span class="toggle-label">Vue 3D</span>
+            </div>
+          </li>
+          <li id="about-btn" class="about">A propos</li>
+          <!-- <li class="recherche">Menu</li> -->
+        </ul>
+      </ul>
+    </nav>
+    
+    <!-- CONTENEUR PRINCIPAL DES CARTES -->
+    <div id="map-container">
+      <button id="openSimulationBtn">SIMULATION DES INDICATEURS</button>
+      <!-- Carte Leaflet 2D -->
+      <div id="map"></div>
+
+      <!-- Carte Mapbox 3D -->
+      <div id="mapbox-map"></div>
+
+      <!-- Indicateur de chargement -->
+      <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Chargement de la vue 3D...</p>
+      </div>
+    </div>
+
+    <div id="indicatorEditorSidebar" class="editor-sidebar">
+      <h2>Simulation des indicateurs</h2>
+      <button id="closeIndicatorEditorSidebar" class="close-btn">Fermer</button>
+      <div id="indicatorEditorContent"></div>
+      <button id="resetSimulation">Réinitialiser</button>
+    </div>
+
+    <div id="sidebar" style="display: none">
+      <button id="closeSidebar"><i class="fa-solid fa-xmark"></i> Fermer</button>
+      <button id="resetButton" class="reset-btn">
+         Réinitialiser la sélection
+      </button>
+
+      <!-- ✅ BOUTONS DE TÉLÉCHARGEMENT -->
+      <div id="download-buttons" class="chart-container">
+        <button id="downloadCSV" class="download-btn">
+          <i class="fa-solid fa-file-csv"></i> Télécharger CSV
+        </button>
+        <button id="downloadGeoJSON" class="download-btn">
+          <i class="fa-solid fa-file-code"></i> Télécharger GeoJSON
+        </button>
+      </div class="chart-container">
+      <canvas id="radarChart" width="400" height="400"></canvas>
+
+      <div id="subRadarContainer" style="display: none; margin-top: 20px">
+        <h3 id="subRadarTitle"></h3>
+        <canvas id="radarSubChart" width="300" height="300"></canvas>
+        <div id="indicatorListContainer">
+          <h4>Indicateurs</h4>
+          <ul id="indicatorList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="infoSidebar" class="info-sidebar" style="display: none;">
+     <div class="info-header">
+        <h2 id="infoCommuneNom">Détails de la commune</h2>
+        <button id="closeInfoSidebar" class="close-btn">&times;</button>
+      </div>
+      <div id="infoCommuneContent" class="info-content">
+        </div>
+    </div>
+
+    
+    <!-- Légende principale (toujours visible) -->
+    <div id="mainLegend" class="map-legend">
+      <h4>Légende</h4>
+      <h5>Score global du bien-être</h5>
+      <div><i style="background: #1a9850"></i> > 50</div>
+      <div><i style="background: #66bd63"></i> 40–50</div>
+      <div><i style="background: #fee08b"></i> 35–40</div>
+      <div><i style="background: #f46d43"></i> 30–35</div>
+      <div><i style="background: #d73027"></i> ≤ 30</div>
+    </div>
+
+    <!-- Légende simulation (affichée uniquement avec la sidebar de gauche) -->
+    <div id="simulationLegend" class="map-legend" style="display: none">
+      <h4>Légende de la simulation</h4>
+      <h5>Score global</h5>
+      <div><i style="background: #344e41"></i> > 50</div>
+      <div><i style="background: #3a5a40"></i> 40–50</div>
+      <div><i style="background: #588157"></i> 35–40</div>
+      <div><i style="background: #a3b18a"></i> 30–35</div>
+      <div><i style="background: #dad7cd"></i> ≤ 30</div>
+    </div>
+
+    <div
+      id="simulatedScoreBubble"
+      class="score-bubble"
+      style="display: none"
+    ></div>
+
+    <!-- FENÊTRE MODALE -->
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>À propos de ce projet</h2>
+        <p>
+          Ce Web SIG interactif permet de visualiser, explorer et interagir avec
+          des données géospatiales issues d'une base
+          <strong>PostgreSQL/PostGIS</strong> et publiées via
+          <strong>GeoServer</strong>.
+        </p>
+        <p>
+          L'application repose sur <strong>Leaflet.js</strong> pour l'affichage
+          des cartes et permet la recherche de communes, la consultation des
+          attributs et le téléchargement des données au format
+          <strong>JSON</strong> ou <strong>CSV</strong>.
+        </p>
+        <p>
+          Développée dans un cadre d'expérimentation en analyse territoriale,
+          cette carte vise à promouvoir l'utilisation des outils SIG libres dans
+          la prise de décision et la planification spatiale.
+        </p>
+        <p style="text-align: right; margin-top: 20px">
+          <a href="#" id="close-link">Fermer</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>© 2026 - UTC AVENUES | Tous droits réservés</footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Ajoutez cette ligne dans le <head> ou avant la fermeture du  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
