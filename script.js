@@ -995,7 +995,7 @@ if (closeInfoBtn) {
 // 2. CHARGEMENT DU GEOJSON ET INTERACTIONS
 // ============================================================
 
-fetch("./ScoreGlobale_indic.geojson")
+fetch("ScoreGlobale_indic.geojson")
   .then((res) => res.json())
   .then((data) => {
     geojson = L.geoJSON(data, {
