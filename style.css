@@ -403,6 +403,9 @@ nav ul {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   height: 36px;
+  width: auto;
+  max-width: 90vw;
+  min-width: 200px;
 }
 
 .search-container:focus-within {
@@ -417,7 +420,10 @@ nav ul {
   outline: none;
   color: white;
   font-size: 13px;
-  width: 300px;
+  width: auto;
+  flex-grow: 1;
+  min-width: 100px;
+  max-width: 500px;
   padding: 3px 8px;
 }
 
@@ -519,13 +525,7 @@ body {
   margin-top: 60px; /* décale tous les contrôles en haut à droite */
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  border-radius: 25px; /* Bordures arrondies modernes */
-  padding: 5px 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+/* Removed duplicate .search-container - already defined above */
 
 #search-input {
   border: none;
@@ -1048,6 +1048,44 @@ canvas {
   border-top: 4px solid #28a745;
 }
 
+/* responsive pour panneau indicateurs */
+#indicator-details-panel {
+  width: 90vw;
+  max-width: 320px;
+}
+#indicator-dropdown {
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  #indicator-details-panel {
+    width: 95vw;
+    max-width: 260px;
+  }
+  #indicator-dropdown {
+    font-size: 12px;
+    margin: 10px;
+    padding: 8px 10px;
+  }
+  .panel-header h3 {
+    font-size: 14px;
+  }
+  .panel-body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #indicator-details-panel {
+    max-width: 300px;
+  }
+  /* simulation button medium small */
+  #openSimulationBtn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
 /* Styles internes du panneau */
 .panel-header h3 {
   margin: 0;
@@ -1124,4 +1162,671 @@ canvas {
 .sens-negatif {
   background: #fee2e2;
   color: #991b1b;
+}
+
+/* ============================
+   RESPONSIVE - TOUS LES ÉCRANS
+   ============================ */
+
+/* ========== MOBILE - Petit (max-width: 480px) ========== */
+@media (max-width: 480px) {
+  /* Navbar */
+  nav {
+    padding: 8px 8px;
+  }
+
+  /* simulation button tiny */
+  #openSimulationBtn {
+    padding: 6px 8px;
+    font-size: 12px;
+    top: 40px;
+    left: 40px;
+  }
+
+  /* simulation button tiny */
+  #openSimulationBtn {
+    padding: 6px 8px;
+    font-size: 12px;
+    top: 40px;
+    left: 40px;
+  }
+
+  /* about button smaller */
+  #about-btn {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+
+  /* modal à propos responsive */
+  .modal-content {
+    width: 95%;
+    max-width: 260px;
+    padding: 12px 16px;
+  }
+  .modal-content h2 {
+    font-size: 16px;
+  }
+  .modal-content p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .modal-content .close-btn {
+    font-size: 18px;
+  }
+
+  /* Enquête panel plus étroit */
+  #survey-panel {
+    width: 95vw !important;
+    max-width: 300px !important;
+  }
+  #survey-panel select {
+    font-size: 10px;
+  }
+  #survey-panel img {
+    max-width: 100%;
+  }
+
+  nav ul {
+    gap: 0.3rem;
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    font-size: 11px;
+  }
+
+  .nav-btn-modern {
+    font-size: 10px;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+
+  .indicator-nav-item .nav-btn-modern {
+    font-weight: normal;
+  }
+
+  /* Conteneur principal */
+  #map-container {
+    top: 38px;
+  }
+
+  /* Sidebar droit réduit */
+  #sidebar {
+    width: 60%;
+    max-width: 180px;
+    top: 38px;
+  }
+
+  #radarChart {
+    max-width: 200px;
+  }
+
+  #radarSubChart {
+    max-width: 160px;
+  }
+
+  /* Slidebar simulation réduit */
+  #indicatorEditorSidebar {
+    width: 60%;
+    max-width: 180px;
+    top: 38px;
+  }
+
+  /* Barre de recherche */
+  .search-container {
+    width: calc(100% - 15px);
+    height: 24px;
+    padding: 0px 4px;
+    max-width: 170px;
+  }
+
+  #search-input {
+    flex-grow: 1;
+    font-size: 9px;
+    min-width: 50px;
+  }
+
+  #search-button {
+    font-size: 9px;
+  }
+
+  /* Boutons téléchargement super petits */
+  .download-btn {
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+  #download-buttons {
+    gap: 3px;
+  }
+
+  /* Bouton réinitialiser */
+  #resetButton,
+  .reset-btn {
+    padding: 6px 8px;
+    font-size: 8px;
+  }
+
+  /* Geocoder */
+  .mapboxgl-ctrl-geocoder {
+    width: 85% !important;
+    top: 8px !important;
+  }
+
+  .mapboxgl-ctrl-geocoder input[type="text"] {
+    font-size: 12px !important;
+    height: 36px !important;
+  }
+
+  /* Toggle 3D */
+  .toggle-3d-control {
+    padding: 5px 8px;
+    gap: 3px;
+    margin-right: 3px;
+  }
+
+  .toggle-label {
+    font-size: 11px;
+    display: none;
+  }
+
+  .switch {
+    width: 45px;
+    height: 22px;
+  }
+
+  .slider:before {
+    height: 18px;
+    width: 18px;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+
+  /* Sidebar droit */
+  #sidebar {
+    width: 70%; /* ne prend pas tout l'écran */
+    max-width: 220px; /* largeur fixe raisonnable */
+    right: 0;
+    top: 50px;
+    height: calc(100% - 50px);
+    padding: 10px;
+  }
+
+  #radarChart {
+    max-width: 240px;
+  }
+
+  #radarSubChart {
+    max-width: 180px;
+  }
+
+  /* Sidebar gauche */
+  .info-sidebar {
+    width: 100%;
+    top: 50px;
+    height: calc(100% - 80px);
+    padding: 15px;
+  }
+
+  /* Slidebar indicateur */
+  #indicatorEditorSidebar {
+    width: 60%;
+    max-width: 180px;
+    top: 50px;
+  }
+
+  /* Panel enquêtes adapté */
+  #survey-panel {
+    width: 90vw !important;
+    max-width: 450px !important;
+  }
+  #survey-panel select {
+    font-size: 12px;
+  }
+  #survey-panel img {
+    max-width: 100%;
+    height: auto;
+  }
+  #survey-panel p,
+  #survey-panel h3,
+  #survey-panel h4,
+  #survey-panel h5 {
+    font-size: 13px;
+  }
+
+  #openSimulationBtn {
+    top: 60px;
+    left: 20px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  /* Boutons téléchargement */
+  .download-btn {
+    padding: 8px 10px;
+    font-size: 10px;
+    gap: 3px;
+  }
+
+  #download-buttons {
+    max-width: 100%;
+    gap: 5px;
+  }
+
+  /* Légende */
+  .map-legend {
+    bottom: 40px;
+    right: 5px;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .map-legend h4 {
+    font-size: 12px;
+  }
+
+  .map-legend h5 {
+    font-size: 9px;
+  }
+
+  /* Modale */
+  .modal-content {
+    width: 95%;
+    margin: 50% auto;
+    padding: 15px 20px;
+  }
+
+  /* Loader */
+  .loader {
+    padding: 20px 25px;
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0078d4;
+  }
+
+  .loader p {
+    font-size: 12px;
+  }
+
+  /* Footer */
+  footer {
+    height: 12px;
+    font-size: 10px;
+    padding: 4px;
+  }
+}
+
+/* ========== MOBILE - Moyen (481px - 768px) ========== */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Navbar */
+  nav {
+    padding: 15px 15px;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  /* Conteneur principal */
+  #map-container {
+    top: 55px;
+  }
+
+  /* Barre de recherche */
+  .search-container {
+    width: 80%;
+    height: 32px;
+    padding: 2px 7px;
+    max-width: 300px;
+  }
+
+  #search-input {
+    flex-grow: 1;
+    font-size: 11px;
+    min-width: 100px;
+  }
+
+  /* Geocoder */
+  .mapboxgl-ctrl-geocoder {
+    width: 90% !important;
+    top: 10px !important;
+  }
+
+  .mapboxgl-ctrl-geocoder input[type="text"] {
+    font-size: 13px !important;
+    height: 38px !important;
+  }
+
+  /* Toggle 3D */
+  .toggle-3d-control {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .toggle-label {
+    font-size: 12px;
+  }
+
+  .switch {
+    width: 55px;
+    height: 28px;
+  }
+
+  .slider:before {
+    height: 20px;
+    width: 20px;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(27px);
+  }
+
+  /* Sidebars */
+  #sidebar {
+    width: 300px;
+    padding: 12px;
+    max-width: 80%;
+  }
+
+  .info-sidebar {
+    width: 300px;
+    padding: 15px;
+  }
+
+  /* Graphiques */
+  #radarChart {
+    max-width: 320px;
+  }
+
+  #radarSubChart {
+    max-width: 250px;
+  }
+
+  /* Boutons */
+  .download-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  /* Panel enquêtes medium */
+  #survey-panel {
+    max-width: 350px !important;
+  }
+  #survey-panel select {
+    font-size: 11px;
+  }
+
+  /* Légende */
+  .map-legend {
+    bottom: 45px;
+    right: 8px;
+    font-size: 11px;
+  }
+
+  .map-legend h4 {
+    font-size: 12px;
+  }
+
+  /* Modale */
+  .modal-content {
+    width: 92%;
+    max-width: 500px;
+    padding: 18px 25px;
+  }
+}
+
+/* ========== TABLETTE (769px - 1024px) ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Navbar */
+  nav {
+    padding: 16px 18px;
+  }
+
+  nav ul {
+    gap: 1.8rem;
+    margin-right: 1.5rem;
+  }
+
+  /* Conteneur principal */
+  #map-container {
+    top: 58px;
+  }
+
+  /* Barre de recherche */
+  .search-container {
+    width: 70%;
+    height: 36px;
+    max-width: 400px;
+  }
+
+  #search-input {
+    flex-grow: 1;
+    font-size: 13px;
+    min-width: 150px;
+  }
+
+  /* Geocoder */
+  .mapboxgl-ctrl-geocoder {
+    width: 85% !important;
+    top: 12px !important;
+  }
+
+  /* Sidebars */
+  #sidebar {
+    width: 340px;
+    padding: 13px;
+    max-width: 80%;
+  }
+
+  .info-sidebar {
+    width: 330px;
+    padding: 16px;
+  }
+
+  #indicatorEditorSidebar {
+    width: 300px;
+    max-width: 80%;
+  }
+
+  /* Graphiques */
+  #radarChart {
+    max-width: 350px;
+  }
+
+  #radarSubChart {
+    max-width: 280px;
+  }
+
+  /* Légende */
+  .map-legend {
+    bottom: 48px;
+    right: 10px;
+    font-size: 12px;
+  }
+}
+
+/* ========== DESKTOP - Standard (1025px - 1440px) ========== */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Navbar */
+  nav {
+    padding: 18px 20px;
+  }
+
+  nav ul {
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  /* Barre de recherche */
+  .search-container {
+    width: 400px;
+    height: 36px;
+  }
+
+  #search-input {
+    flex-grow: 1;
+    font-size: 13px;
+    min-width: 200px;
+  }
+
+  /* Geocoder */
+  .mapboxgl-ctrl-geocoder {
+    width: 400px !important;
+  }
+
+  /* Sidebars */
+  #sidebar {
+    width: 410px;
+    padding: 15px;
+  }
+
+  .info-sidebar {
+    width: 350px;
+    padding: 20px;
+  }
+
+  #indicatorEditorSidebar {
+    width: 400px;
+  }
+
+  /* Graphiques */
+  #radarChart {
+    max-width: 400px;
+  }
+
+  #radarSubChart {
+    max-width: 300px;
+  }
+}
+
+/* ========== DESKTOP - Grand (1441px et plus) ========== */
+@media (min-width: 1441px) {
+  /* Par défaut, les styles du fichier principal s'appliquent */
+
+  /* Optimisation pour les grands écrans */
+  #sidebar {
+    width: 450px;
+    padding: 16px;
+  }
+
+  .info-sidebar {
+    width: 380px;
+  }
+
+  #radarChart {
+    max-width: 420px;
+  }
+
+  #radarSubChart {
+    max-width: 320px;
+  }
+
+  .search-container {
+    width: 450px;
+  }
+
+  #search-input {
+    flex-grow: 1;
+    min-width: 250px;
+  }
+}
+
+/* ========== ORIENTATION PAYSAGE / PORTRAIT ========== */
+@media (orientation: portrait) and (max-width: 768px) {
+  #sidebar {
+    width: 70%;
+    max-width: 240px;
+  }
+
+  .info-sidebar {
+    width: 100%;
+  }
+
+  #radarChart {
+    max-width: 250px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  #map-container {
+    top: 45px;
+  }
+
+  #sidebar {
+    height: calc(100% - 45px);
+    top: 45px;
+  }
+
+  .info-sidebar {
+    height: calc(100% - 45px);
+    top: 45px;
+  }
+
+  footer {
+    height: 10px;
+    padding: 2px;
+  }
+}
+
+/* ========== PETITS ÉCRANS AVEC GRAND RAPPORT D'ASPECT ========== */
+@media (max-width: 600px) and (aspect-ratio > 1) {
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  .toggle-label {
+    display: none;
+  }
+
+  #search-input {
+    width: 120px;
+  }
+}
+
+/* ========== ÉCRANS TACTILES ========== */
+@media (hover: none) and (pointer: coarse) {
+  /* Plus d'espace pour les clics sur mobile */
+  .download-btn {
+    padding: 12px 14px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-btn-modern {
+    padding: 8px 14px;
+    min-height: 44px;
+  }
+
+  .reset-btn {
+    padding: 8px 14px;
+    min-height: 44px;
+  }
+
+  #resetButton {
+    padding: 12px 16px;
+    min-height: 44px;
+  }
+
+  /* Boutons avec bordures plus nettes */
+  button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
 }
