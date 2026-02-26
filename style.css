@@ -1368,10 +1368,11 @@ canvas {
 
   /* Sidebar gauche */
   .info-sidebar {
-    width: 100%;
+    width: 60%;
+    max-width: 240px;
     top: 50px;
     height: calc(100% - 80px);
-    padding: 15px;
+    padding: 12px;
   }
 
   /* Slidebar indicateur */
@@ -1752,7 +1753,8 @@ canvas {
   }
 
   .info-sidebar {
-    width: 100%;
+    width: 60%;
+    max-width: 220px;
   }
 
   #radarChart {
