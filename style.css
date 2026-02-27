@@ -37,6 +37,23 @@
   animation: fadeIn 0.3s ease;
 }
 
+/* logos ajoutés dans modal "À propos" */
+.about-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.about-logos img {
+  height: 40px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .about-logos img { height: 30px; }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -351,13 +368,32 @@ footer {
   color: #fff;
   text-align: center;
   padding: 8px;
-  font-size: 12;
+  font-size: 12px;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 14px;
+  height: auto; /* changé pour s'adapter au contenu */
   z-index: 999;
+
+  /* Ajouts pour le logo responsive */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+footer img {
+  height: clamp(14px, 2vw, 22px); /* s'adapte à la hauteur du footer */
+  width: auto;
+  object-fit: contain;
+}
+
+footer span {
+  font-size: clamp(10px, 1.5vw, 12px);
+  white-space: nowrap; /* évite le retour à la ligne du texte */
 }
 /* Navbar */
 nav {
@@ -1187,6 +1223,17 @@ canvas {
   /* Navbar */
   nav {
     padding: 8px 8px;
+  }
+
+  /* ensure map reaches footer on small screens */
+  #map-container {
+    bottom: 0;
+  }
+
+  /* shrink footer padding so it doesn't cause extra blank area */
+  footer {
+    padding: 4px 6px;
+    font-size: 10px;
   }
 
   /* simulation button tiny - réduit davantage pour petits écrans */
