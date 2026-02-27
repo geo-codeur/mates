@@ -312,21 +312,22 @@
   .toggle-3d-control {
     top: 10px;
     right: 10px;
-    padding: 10px 15px;
+    padding: 6px 8px;
+    gap: 4px;
   }
 
   .toggle-label {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .switch {
-    width: 60px;
-    height: 30px;
+    width: 50px;
+    height: 28px;
   }
 
   .slider:before {
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
   }
 
   .switch input:checked + .slider:before {
@@ -495,6 +496,19 @@ nav ul li {
   transition: color 0.3s;
 }
 nav ul li:hover {
+  color: #007bff;
+}
+
+/* bouton mode emploi spécifique */
+#mode-btn {
+  /* inherits nav ul li rules, color/hover handled above */
+}
+#mode-btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#mode-btn a:hover {
   color: #007bff;
 }
 
@@ -1175,26 +1189,37 @@ canvas {
     padding: 8px 8px;
   }
 
-  /* simulation button tiny */
+  /* simulation button tiny - réduit davantage pour petits écrans */
   #openSimulationBtn {
-    padding: 6px 8px;
-    font-size: 12px;
-    top: 40px;
-    left: 40px;
+    padding: 2px 4px;
+    font-size: 8px;
+    top: 30px;
+    left: 30px;
   }
 
-  /* simulation button tiny */
-  #openSimulationBtn {
-    padding: 6px 8px;
-    font-size: 12px;
-    top: 40px;
-    left: 40px;
+  /* about and mode buttons extra small */
+  #about-btn,
+  #mode-btn {
+    font-size: 8px;
+    padding: 2px 4px;
   }
 
-  /* about button smaller */
-  #about-btn {
-    font-size: 10px;
+  /* shrink 3D toggle control */
+  .toggle-3d-control {
     padding: 4px 6px;
+    gap: 4px;
+  }
+  .toggle-label {
+    font-size: 8px;
+  }
+  .slider-text {
+    font-size: 8px;
+  }
+
+  /* réduire flèche du nord */
+  .info.nort img {
+    width: 30px !important;
+    height: auto;
   }
 
   /* modal à propos responsive */
@@ -1273,22 +1298,31 @@ canvas {
     top: 38px;
   }
 
-  /* Barre de recherche */
+  /* Barre de recherche (réduite) */
+  /* leave space for right-side buttons; avoid overlap */
   .search-container {
-    width: calc(100% - 15px);
+    width: calc(100% - 140px);
     height: 24px;
-    padding: 0px 4px;
-    max-width: 170px;
+    padding: 0px 2px;
+    max-width: 120px;
   }
 
   #search-input {
     flex-grow: 1;
-    font-size: 9px;
-    min-width: 50px;
+    font-size: 8px;
+    min-width: 40px;
   }
 
   #search-button {
-    font-size: 9px;
+    font-size: 8px;
+  }
+
+  /* remettre ajustement pour très petits écrans si besoin */
+  @media (max-width: 360px) {
+    .search-container {
+      width: calc(100% - 160px);
+      max-width: 100px;
+    }
   }
 
   /* Boutons téléchargement super petits */
@@ -1320,19 +1354,19 @@ canvas {
 
   /* Toggle 3D */
   .toggle-3d-control {
-    padding: 5px 8px;
-    gap: 3px;
-    margin-right: 3px;
+    padding: 4px 6px;
+    gap: 2px;
+    margin-right: 2px;
   }
 
   .toggle-label {
-    font-size: 11px;
+    font-size: 10px;
     display: none;
   }
 
   .switch {
-    width: 45px;
-    height: 22px;
+    width: 40px;
+    height: 20px;
   }
 
   .slider:before {
@@ -1608,15 +1642,15 @@ canvas {
 
   /* Barre de recherche */
   .search-container {
-    width: 70%;
-    height: 36px;
-    max-width: 400px;
+    width: 65%;
+    height: 34px;
+    max-width: 320px;
   }
 
   #search-input {
     flex-grow: 1;
-    font-size: 13px;
-    min-width: 150px;
+    font-size: 12px;
+    min-width: 120px;
   }
 
   /* Geocoder */
